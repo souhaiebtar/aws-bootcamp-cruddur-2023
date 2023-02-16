@@ -5,4 +5,4 @@
 
 ![install-aws-cli][awscliSetupImage]
 
-[awscliSetupImage]: assets/proofAwsCliSetup.png
+[awscliSetupImage]: assets/proofAwsCliInstalledWithCredentialApplied.png
