@@ -8,7 +8,7 @@ as  i'm working on Linux ( ubuntu more exactly ), i did use the snippet in the L
 
 ![install-aws-cli][awscliSetupImage]
 
-### Generate Aws credentials and 
+### Generate Aws credentials 
 after that i did setup my credentials (Access key ID,Secret access key) that i generated in the `IAM`,
 the setup was made using the command `aws configure` , the picture below is the result of the command `aws configure list` 
 
@@ -16,13 +16,15 @@ the setup was made using the command `aws configure` , the picture below is the 
 
 ### Create a Billing Alarm
 
-after watch [chirag video][chirag video], i did setup a billing alarm using *CloudWatch* like shown in 
+after watch [chirag video][chirag video], i did setup a billing alarm for 25$ using *CloudWatch* like shown in 
 
 ![AwsBillingAlert][awsBillingAlertOnCloudWatch]
 
 ### Creating a budget
 
-i created the budget using the information from [chirag video][chirag video], the picture [awsBudgetSetup][awsBudgetSetup] show the result
+i created the budget using the information from [chirag video][chirag video], the picture below show the result which is set to equal to 25$ or greater, the 
+
+![awsBudgetSetup][awsBudgetSetup]
 
 
 [awscliSetupImage]: assets/proofAwsCliInstalledWithCredentialApplied.png
@@ -34,3 +36,7 @@ i created the budget using the information from [chirag video][chirag video], th
 [awsBillingAlertOnCloudWatch]: assets/awsBillingAlertOnCloudWatch.png
 
 [chirag video]: https://www.youtube.com/watch?v=OVw3RrlP-sI&list=PLBfufR7vyJJ7k25byhRXJldB5AiwgNnWv&index=13
+
+[conceptualDiagram]: assets/crudderConceptualDiagram.png
+
+[logicalDiagram]: assets/CruddurLogicalDiagram.png
