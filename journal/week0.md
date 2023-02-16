@@ -20,11 +20,27 @@ after watch [chirag video][chirag video], i did setup a billing alarm for 25$ us
 
 ![AwsBillingAlert][awsBillingAlertOnCloudWatch]
 
-### Creating a budget
+### Creat a budget
 
 i created the budget using the information from [chirag video][chirag video], the picture below show the result which is set to equal to 25$ or greater, the 
 
 ![awsBudgetSetup][awsBudgetSetup]
+
+### Recreate Logical Architectural Design
+
+![cruddurLogicalDiagram][logicalDiagram]
+
+[lucid Chart share link][lucidChartLinkLogicalDiagram]
+
+### Recreate Conceptual Architectural Design
+
+![cruddurConceptualDiagram][conceptualDiagram]
+
+[lucid Chart share link][lucidChartLinkConceptualDiagram]
+
+
+## Homework Challenges
+
 
 
 [awscliSetupImage]: assets/proofAwsCliInstalledWithCredentialApplied.png
@@ -40,3 +56,7 @@ i created the budget using the information from [chirag video][chirag video], th
 [conceptualDiagram]: assets/crudderConceptualDiagram.png
 
 [logicalDiagram]: assets/CruddurLogicalDiagram.png
+
+[lucidChartLinkLogicalDiagram]: https://lucid.app/lucidchart/35ddc8ec-09ea-4d12-8e41-ca5e82112a73/edit?viewport_loc=216%2C41%2C2017%2C1108%2C0_0&invitationId=inv_a4738964-b448-4803-a759-091d8df55e56
+
+[lucidChartLinkConceptualDiagram]: https://lucid.app/lucidchart/ea7cac01-5bb9-4a97-b6e2-4b545bf0aca6/edit?viewport_loc=-963%2C-453%2C2473%2C1358%2C0_0&invitationId=inv_b622e53f-09aa-482d-bbf0-513169b20c70
