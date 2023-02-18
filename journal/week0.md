@@ -20,7 +20,7 @@ after watch [chirag video][chirag video], i did setup a billing alarm for 25$ us
 
 ![AwsBillingAlert][awsBillingAlertOnCloudWatch]
 
-### Creat a budget
+### Create a budget
 
 i created the budget using the information from [chirag video][chirag video], the picture below show the result which is set to equal to 25$ or greater, the 
 
