@@ -22,7 +22,6 @@ vscode:
   extensions:
     - 42Crunch.vscode-openapi
     - cweijan.vscode-postgresql-client2@3.7.0
-    - eamodio.gitlens@11.7.0
 
 ports:
   - name: frontend
