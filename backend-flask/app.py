@@ -15,7 +15,9 @@ from services.messages import *
 from services.create_message import *
 from services.show_activity import *
 
-from lib.cognito_token_verification import CognitoTokenVerification
+from lib.cognito_jwt_token import CognitoJwtToken, extract_access_token, TokenVerifyError
+
+
 
 # HoneyComb ---------
 from opentelemetry import trace
@@ -68,7 +70,7 @@ tracer = trace.get_tracer(__name__)
 
 app = Flask(__name__)
 
-cognito_token_verification = CognitoTokenVerification(
+cognito_jwt_token = CognitoJwtToken(
   user_pool_id= os.getenv("AWS_COGNITO_USER_POOL_ID"),
   user_pool_client_id= os.getenv("AWS_COGNITO_USER_POOL_CLIENT_ID"),
   region= os.getenv("AWS_DEFAULT_REGION")
@@ -160,7 +162,21 @@ def data_create_message():
 
 @app.route("/api/activities/home", methods=['GET'])
 def data_home():
-  data = HomeActivities.run()
+  access_token = extract_access_token(request.headers)
+  try:
+    # authenticated
+    claims = cognito_jwt_token.verify(access_token)
+    app.logger.debug("authenticated")
+    app.logger.debug(claims)
+    # app.logger.debug('-------------------------')
+    # app.logger.debug(claims['username'])
+    # app.logger.debug('-------------------------')
+    data = HomeActivities.run(cognito_user_id=claims['username'])
+  except TokenVerifyError as e:
+    # unauthenticated
+    app.logger.debug("unauthenticated")
+    data = HomeActivities.run()
+
   return data, 200
 
 @app.route("/api/activities/notifications", methods=['GET'])
